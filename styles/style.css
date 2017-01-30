@@ -2,6 +2,169 @@
 i know i'm not using bootstrap
 */
 
-body {
-  font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+ul {
+  overflow: auto;
+  list-style-type: none;
+}
+
+li {
+  height: 25px;
+  margin-right: 0;
+  border-right: 2px solid #000000;
+  border-color: #FFFFFF;
+  padding: 15px 20px;
+  display: inline-block;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font: 30px/1 Quicksand, Helvetica, sans-serif;
+  text-transform: lowercase;
+} 
+
+li a:hover {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+li a:active {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+table {
+  width: 50%;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+tr, th {
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 1px;
+
+}
+
+tr:nth-child(even) {
+    background-color: #E0E0E0;
+}
+
+.nav { 
+  margin: auto;
+  margin-bottom: 1%;
+  width: 100%;
+  text-align: center;
+  background-color: #B388FF;
+}
+
+.social {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.instagram:active {
+  transform: translateY(3px);
+}
+
+.twitter:active {
+  transform: translateY(3px);
+}
+
+.linkedin:active {
+  transform: translateY(3px);
+}
+
+.email:active {
+  transform: translateY(3px);
+}
+
+div.img {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #FFFFFF;
+  width: 25%;
+}
+
+div.img:hover {
+  background-color: #D1C4E9;
+  /* browser engine support */
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+div.img:hover a {
+  color: #FFFFFF;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+div.img img {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+div.desc {
+  font-size: 30px;
+  padding: 10%;
+  text-align: center;
+}
+
+.about-img {
+  text-align: center;
+}
+
+.about {
+  text-align: center;
+}
+
+#images {
+  text-align: center;
+}
+
+#social-list a {
+  color: #000000;
+}
+
+#social-list a:hover {
+  font-weight: bold;
+  color: #000000;
+}
+
+#license-footer {
+  position: relative;
+  bottom:0;
+  width:100%;
+  font-size: 10px;
+}
+
