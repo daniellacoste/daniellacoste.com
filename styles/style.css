@@ -9,6 +9,11 @@ i know i'm not using bootstrap
 
 body {
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+body.greeting {
+  text-align: center;
 }
 
 a {
