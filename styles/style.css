@@ -101,6 +101,10 @@ tr:nth-child(even) {
   transform: translateY(3px);
 }
 
+.email:active {
+  transform: translateY(3px);
+}
+
 div.img {
   display: inline-block;
   vertical-align: text-bottom;
