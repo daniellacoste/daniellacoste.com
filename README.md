@@ -1,2 +1,5 @@
 # daniellacoste.github.io
-My personal website! A home for my blog posts, photos, and other musings. Additionally, it is my playground for applying and honing my web development skils!
+My [personal website](http://www.daniellacoste.com)! 
+
+A home for my blog posts, photography, and other musings. 
+Also, it is my sandbox for applying and honing my web development skils!
