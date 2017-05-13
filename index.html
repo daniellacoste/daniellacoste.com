@@ -1,43 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- metadata -->
+    <!-- Metadata -->
     <meta charset="UTF-8"> <!-- specifies the character encoding for the HTML document -->
-    <title> LaCoste Logic </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LaCoste Logic</title>
+
+    <!-- Bootstrap v3.3.7 -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+    <!-- Bootstrap v4.0-alpha -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Font Awesome-->
+    <script src="https://use.fontawesome.com/033c43acad.js"></script>
+    <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+
     <link rel="shortcut icon" type=image/png href="favicon.png"/>
     <link rel="stylesheet" href="styles/style.css">
-    <link href='//fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-    <script src="js/typewriter.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand|Droid+Serif|Oswald|Abel' rel='stylesheet'>
   </head>
   <div class="nav">
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="photography.html">Photography</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#about" class="hvr-underline-from-center">About</a></li>
+        <li><a href="#education" class="hvr-underline-from-center">Education</a></li>
+        <li><a href="#experience" class="hvr-underline-from-center">Experience</a></li>
+        <li><a href="#portfolio" class="hvr-underline-from-center">Portfolio</a></li>
+        <li><a href="photography.html" class="hvr-underline-from-center">Photography</a></li>
+        <li><a href="#connect" class="hvr-underline-from-center">Connect</a></li>
+      </ul>
+    </nav>
   </div>
-  <body class="greeting">
-    <div class="about">
-      <p> hello world! </p>
-      <p>  
-        stay awhile and ...
-        <a href="" class="typewrite" data-period="2000" data-type='[ "peruse.", "connect.", "listen." ]'>
+  <body class="main">
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="modal-body">
+                  <h1>murmur</h1>
+                  <h4>a simple chat app</h4>
+                  <p class="item-intro text-muted">Summary</p>
+                  <p>This web-based chat application is built on socket.io, nodejs, and hand-crafted HTML/CSS. Check out the video below to see it in action! You may view the entire project on <a href="https://github.com/daniellacoste/Murmur">GitHub.</a></p>
+                  <p class="item-intro text-muted">Requirements</p>
+                  <ul>
+                    <li>attractive and responsive design</li>
+                    <li>modify user nickname</li>
+                    <li>adjust nickname color</li>
+                    <li>chat log history</li>
+                    <li>multi-user support</li>
+                    <li>cookies</li>
+                  </ul>
+                  <video id="murmur-video" controls width="720" height="480" poster="img/murmur.png"><source src="img/murmur.mp4" type="video/mp4"></video>
+                  <br></br>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Portfolio Modals -->
+    <div id="about" class="section" >
+      <h1 id="name">Daniel LaCoste</h1>
+      <h3>developer &#8226 audiophile &#8226 proud geek</h3>
+      <div id="about-img">
+        <img src="img/self-blue.png">
+      </div>
+      <h1>Hello world!</h1>
+      <h3>stay awhile and ...
+        <span class="typewrite" data-period="2000" data-type='[ "peruse.", "connect.", "listen." ]'>
           <span class="wrap"></span>
-        </a>
-      </p>
+        </span>
+      </h3>
     </div>
-    <div class="about-img">
-      <img src="img/self.gif">
+    <div id="education" class="section" >
+      <h1>I graduated from the [ <span><img id="uc-logo" src="img/uc-horz-black.png"></span> ] in 2017</h1>
+      <h1 id="degree">BSc, Major in Computer Science</h1>
+      <h2><a href="#courses" id="toggle-courses" class="toggle hvr-underline-from-center" data-toggle="collapse" onclick="toggleCourses()">[ show courses ]</a></h2>
+      <div id="courses" class="collapse">
+        <table id="cpsc-courses">
+          <tr>
+            <th>COURSE</th>
+            <th>TITLE</th>
+          </tr>
+          <tr>
+            <td>CPSC 231</td>
+            <td>Introduction to Computer Science I</td>
+          </tr>
+          <tr>
+            <td>CPSC 233</td>
+            <td>Introduction to Computer Science II</td>
+          </tr>
+          <tr>
+            <td>SENG 301</td>
+            <td>Analysis & Design of Large Software</td>
+          </tr>
+          <tr>
+            <td>CPSC 313 </td>
+            <td>Introduction to Computability</td>
+          </tr>
+          <tr>
+            <td>CPSC 319</td>
+            <td>Data Structures, Applications & Algorithms</td>
+          </tr>
+          <tr>
+            <td>CPSC 329</td>
+            <td>Explorations in Information Security and Privacy</td>
+          </tr>
+          <tr>
+            <td>CPSC 355</td>
+            <td>Computing Machinery I (x86 Programming)</td>
+          </tr>
+          <tr>
+            <td>CPSC 359</td>
+            <td>Computing Machinery II (RPi Programming)</td>
+          </tr>
+          <tr>
+            <td>CPSC 413</td>
+            <td>Design & Analysis of Algorithms I</td>
+          </tr>
+          <tr>
+            <td>CPSC 441</td>
+            <td>Computer Networks</td>
+          </tr>
+          <tr>
+            <td>CPSC 449</td>
+            <td>Programming Paradigms</td>
+          </tr>
+          <tr>
+            <td>CPSC 457</td>
+            <td>Principles of Operating Systems</td>
+          </tr>
+          <tr>
+            <td>CPSC 471</td>
+            <td>Database Management Systems</td>
+          </tr>
+          <tr>
+            <td>CPSC 481</td>
+            <td>Human Computer Interaction I</td>
+          </tr>
+          <tr>
+            <td>CPSC 499</td>
+            <td>Software Entrepreneurship</td>
+          </tr>
+          <tr>
+            <td>INTE 503 I, II, III, IV</td>
+            <td>16mos. Internship in Computer Science</td>
+          </tr>
+          <tr>
+            <td>SENG 513</td>
+            <td>Web Based Systems</td>
+          </tr>
+          <tr>
+            <td>CPSC 526</td>
+            <td>Network Systems Security</td>
+          </tr>
+          <tr>
+            <td>CPSC 599</td>
+            <td>Retrogame Programming</td>
+          </tr>
+        </table>
+      </div>
     </div>
-    <div class="about">
-      <h1> Daniel LaCoste </h1>
-      <p>computer scientist • audiophile • proud geek • Overwatch hero</p>
+    <div id="experience" class="section">
+      <h1>where I've worked:</h1>
+      <div class="card-deck">
+        <div id="hitachi-xp" class="card">
+          <img class="card-img-top mx-auto" src="img/hitachi-id-logo.png" width="290" height="110">
+          <h3 class="card-title">Technical Support Analyst, Intern</h3>
+        </div>
+        <div id="ucalgary-xp" class="card">
+          <img class="card-img-top mx-auto" src="img/uc-horz-rgb.png" width="230" height="110">
+          <h3 class="card-title">Network Technician</h3>
+        </div>
+        <div id="google-xp" class="card">
+          <img class="card-img-top mx-auto" src="img/google-logo.png" height="110">
+          <h3 class="card-title">Brand Ambassador</h3>
+        </div>
+      </div>
     </div>
+    <div id="portfolio" class="section">
+      <h1>what I've built:</h1>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 portfolio-item">
+            <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span>read <i class="fa fa-comment-o fa-3x"></i> more</span>
+                </div>
+              </div>
+              <img src="img/murmur.png" class="img-fluid" width="100%" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>murmur</h4>
+              <p class="text-muted">a socket.io chat app</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="connect" class="section">
+      <br></br>
+      <div id="social-list">
+        <li class="instagram"><a href="https://www.instagram.com/daniellacoste.mp3/" class="hvr-outline-out"><img src="img/instagram.png" alt=instagram width="38"/></a></li>
+        <li class="twitter"><a href="https://www.twitter.com/daniellacoste/" class="hvr-outline-out"><img src="img/twitter.png" alt=twitter width="38"/></a></li>
+        <li class="linkedin"><a href="https://www.linkedin.com/in/dlacoste" class="hvr-outline-out"><img src="img/linkedin.png" alt=linkedin width="38"/></a></li>
+        <li class="github"><a href="https://www.github.com/daniellacoste" class="hvr-outline-out"><img src="img/github.png" alt=github width="38"/></a></li>
+        <li class="email"><a href="mailto:daniel.e.lacoste@gmail.com" class=" hvr-outline-out"><img src="img/email.png" alt=email width="38"/></a></li>
+      </div>
+      <br></br>
+      <div id="license-footer">Icons made by <a href="http://www.flaticon.com/authors/agata-kuczminska" title="Agata Kuczminska"><u>Agata Kuczminska</u></a> from <a href="http://www.flaticon.com" title="Flaticon"><u>www.flaticon.com</u></a>, licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"><u>CC BY 3.0</u></a></div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/typewriter.js"></script>
   </body>
 </html>
 
