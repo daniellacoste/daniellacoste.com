@@ -26,7 +26,7 @@ a:hover {
 
 h1, h2, h3 {
   margin: 0;
-  padding: 15px;
+  padding-bottom: 15px;
 }
 
 h2 {
@@ -457,7 +457,7 @@ div.desc {
 }
 
 .card {
-  min-width: 175px;
+  min-width: 250px;
   border-color: #000000;
   border-style: solid;
   border-width: 1px;
@@ -470,10 +470,10 @@ div.desc {
   padding-bottom: 25px;
 }
 img.card-img-top.mx-auto {
+  display: block;
   min-width: 175px;
-  min-height: 110px;
-  padding-bottom: 25px;
-  padding-top: 25px;
+  min-height: 100px;
+  padding: 25px 10px;
 }
 h3.card-title {
   margin-bottom: 0;  
@@ -531,7 +531,7 @@ h3.card-title {
   margin: 0 auto;
   background-color: white;
   text-align: center;
-  padding: 25px;
+  padding-bottom: 15px;
 }
 #portfolio .portfolio-item .portfolio-caption h4 {
   text-transform: none;
@@ -561,8 +561,8 @@ h3.card-title {
   box-shadow: none;
   border: none;
   min-height: 100%;
-  padding: 100px 0;
-  text-align: center;
+  padding: 70px 0;
+  text-align: left;
 }
 .portfolio-modal .modal-content h2 {
   margin-bottom: 15px;
@@ -638,6 +638,9 @@ div.modal-dialog .modal-content .container .row {
   max-width: 75%;
 }
 
+.modal-body {
+  padding: 20px;
+}
 .modal-body ul li {
   list-style-type: none;
 }
@@ -647,3 +650,14 @@ div.modal-dialog .modal-content .container .row {
 .modal-body h1 {
   text-decoration: underline;
 }
+
+/* toggle HTML based on screen size */ 
+@media all and (min-width: 505px) {
+    .card-text .desktop {display: block;}
+    .card-text .mobile {display: none;}
+}
+@media all and (max-width: 504px) {
+    .card-text .desktop {display: none;}
+    .card-text .mobile {display: block;}
+}
+

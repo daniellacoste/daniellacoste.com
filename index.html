@@ -39,7 +39,7 @@
   </div>
   <body class="main">
     <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="portfolio-modal modal fade" id="portfolio-modal-1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -48,27 +48,29 @@
               </div>
             </div>
           </div>
-          <div class="container">
+          <div class="container modal-dialog">
             <div class="row">
-              <div class="col-lg-12">
-                <div class="modal-body">
-                  <h1>murmur</h1>
-                  <h4>a simple chat app</h4>
-                  <p class="item-intro text-muted">Summary</p>
-                  <p>This web-based chat application is built on socket.io, nodejs, and hand-crafted HTML/CSS. Check out the video below to see it in action! You may view the entire project on <a href="https://github.com/daniellacoste/Murmur">GitHub.</a></p>
-                  <p class="item-intro text-muted">Requirements</p>
-                  <ul>
-                    <li>attractive and responsive design</li>
-                    <li>modify user nickname</li>
-                    <li>adjust nickname color</li>
-                    <li>chat log history</li>
-                    <li>multi-user support</li>
-                    <li>cookies</li>
-                  </ul>
-                  <video id="murmur-video" controls width="720" height="480" poster="img/murmur.png"><source src="img/murmur.mp4" type="video/mp4"></video>
-                  <br></br>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i></button>
+              <div class="modal-body">
+                <h1>murmur</h1>
+                <h4>a simple chat app</h4>
+                <p class="item-intro text-muted">Summary</p>
+                <p>This web-based chat application is built on socket.io, Node.js, JavaScript, and hand-crafted HTML/CSS. Check out the video below to see it in action! You may view the entire project on <a href="https://github.com/daniellacoste/Murmur">GitHub.</a></p>
+                <p class="item-intro text-muted">Requirements</p>
+                <ul>
+                  <li>&#8259 attractive and responsive design</li>
+                  <li>&#8259 modify user nickname</li>
+                  <li>&#8259 adjust nickname color</li>
+                  <li>&#8259 chat log history</li>
+                  <li>&#8259 multi-user support</li>
+                  <li>&#8259 cookies</li>
+                </ul>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <video id="murmur-video" class="embed-responsive-item"controls poster="img/murmur.png"> 
+                    <source src="img/murmur.mp4" type="video/mp4"></source>
+                  </video>
                 </div>
+                <br></br>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i></button>
               </div>
             </div>
           </div>
@@ -181,17 +183,26 @@
     <div id="experience" class="section">
       <h1>where I've worked:</h1>
       <div class="card-deck">
-        <div id="hitachi-xp" class="card">
-          <img class="card-img-top mx-auto" src="img/hitachi-id-logo.png" width="290" height="110">
+        <div id="hitachi-card" class="card">
+          <img class="card-img-top mx-auto" src="img/hitachi-id-logo.png" width="250" height="100">
           <h3 class="card-title">Technical Support Analyst, Intern</h3>
+          <p>
+            <small class="text-muted">May 2015 - August 2016</small>
+          </p>
         </div>
-        <div id="ucalgary-xp" class="card">
-          <img class="card-img-top mx-auto" src="img/uc-horz-rgb.png" width="230" height="110">
+        <div id="ucalgary-card" class="card">
+          <img class="card-img-top mx-auto" src="img/uc-horz-rgb.png" width="200" height="100">
           <h3 class="card-title">Network Technician</h3>
+          <p>
+            <small class="text-muted">September 2013 - April 2014</small>
+          </p>
         </div>
-        <div id="google-xp" class="card">
-          <img class="card-img-top mx-auto" src="img/google-logo.png" height="110">
+        <div id="google-card" class="card">
+          <img class="card-img-top mx-auto" src="img/google-logo.png" height="100">
           <h3 class="card-title">Brand Ambassador</h3>
+          <p>
+            <small class="text-muted">September 2013 - April 2014</small>
+          </p>
         </div>
       </div>
     </div>
@@ -200,14 +211,22 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12 portfolio-item">
-            <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+            <a href="#portfolio-modal-1" class="portfolio-link" data-toggle="modal">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <span>read <i class="fa fa-comment-o fa-3x"></i> more</span>
                 </div>
               </div>
-              <img src="img/murmur.png" class="img-fluid" width="100%" alt="">
+              <img class="img-fluid" src="img/murmur.png" width="100%" alt="">
             </a>
+            <div class="card-text">
+              <p>
+                <small class="desktop text-muted">click logo for more</small>
+              </p>
+              <p>
+                <small class="mobile text-muted">tap logo for more</small>
+              </p>
+            </div>
             <div class="portfolio-caption">
               <h4>murmur</h4>
               <p class="text-muted">a socket.io chat app</p>
