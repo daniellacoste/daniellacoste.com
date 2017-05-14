@@ -16,11 +16,7 @@ a {
   color: var(--black);
   text-decoration: none;
 }
-a:focus{
-  color: var(--black);
-  text-decoration: none;
-}
-a:hover {
+a:focus, a:hover{
   color: var(--black);
   text-decoration: none;
 }
@@ -681,45 +677,52 @@ div.modal-dialog .modal-content .container .row {
 
 .forest {
   float: left;
-  width: 25%;
   height: 100vh;
   object-fit: cover;
+  width: 25%;
 }
 .lake {
   float: left;
-  width: 25%;
   height: 100vh;
   object-fit: cover;
+  width: 25%;
 }
 .road{
   float: left;
-  width: 25%;
   height: 100vh;
   object-fit: cover;
+  width: 25%;
 }
 .building {
   float: right;
-  width: 25%;
   height: 100vh;
   object-fit: cover;
+  width: 25%;
 }
 
 #photography {
   height: 100%;
-  position: relative;
   padding: 0;
   padding-bottom: 15px;
+  position: relative;
 }
 #photography h1 {
-  position: absolute;
-  top: 50vh;
-  width: 100%;
   color: var(--white);
+  top: 50vh;
+  position: absolute;
+  width: 100%;
+}
+#photography h3 {
+  color: var(--white);
+  top: 75vh;
+  position: absolute;
+  width: 100%;
 }
 #photography h3 a {
-  top: 75vh;
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 10px;
   color: var(--white);
+}
+
+#photography a.hvr-underline-from-center {
+  padding: 5px;
+  width: 100%;
 }
