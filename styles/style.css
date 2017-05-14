@@ -12,15 +12,15 @@ body.main{
 }
 
 a {
-  color: #000000;
+  color: var(--black);
   text-decoration: none;
 }
 a:focus{
-  color: #000000;
+  color: var(--black);
   text-decoration: none;
 }
 a:hover {
-  color: #000000;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -28,9 +28,18 @@ h1, h2, h3 {
   margin: 0;
   padding-bottom: 15px;
 }
-
 h2 {
   line-height: 1.3;
+}
+
+/* Colors */
+:root {
+  --primary: #1976D2;
+  --light: #63A4FF;
+  --dark: #004BA0;
+  --white: #FFFFFF;
+  --black: #000000;
+  --shadow: #616161;
 }
 
 /* Underline From Center */
@@ -50,7 +59,7 @@ h2 {
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #FFFFFF;
+  background: var(--white);
   height: 1px;
   -webkit-transition-property: 25px, 25px;
   transition-property: left, right;
@@ -68,7 +77,7 @@ h2 {
   margin: auto;
   width: 100%;
   text-align: center;
-  background-color: #B388FF; /* material deep purple */
+  background-color: var(--dark); 
 }
 .nav ul {
   margin: 0;
@@ -80,18 +89,18 @@ h2 {
   display: inline-block;
 }
 .nav li a {
-  color: #FFFFFF;
+  color: var(--white);
   font: 20px/1.2 'Abel', 'Helvetica', sans-serif;
   text-transform: lowercase;
 } 
 .nav a:active {
-  color: #EDE7F6;
+  color: var(--white);
 }
 .nav a:focus {
-  color: #FFFFFF;
+  color: var(--white);
 }
 nav a:hover {
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 #navbar {
@@ -108,8 +117,8 @@ td {
   padding: 5px;
 }
 th {
-  color: #FFFFFF;
-  background: #80D8FF;
+  color: var(--white);
+  background: var(--light);
   font-size: 20px;
   text-align: center;
   padding: 15px;
@@ -133,20 +142,19 @@ tr:nth-child(even) {
 
 #about {
   margin: 0;
-  color: #FFFFFF;
-  background-color: #80D8FF; /* material light blue */
+  color: var(--white);
+  background-color: var(--primary);
   text-align: center;
-  opacity: 0.9;
 }
 #about-img {
   text-align: center;
 }
 
 #education {
-  background-color: #FFFFFF;
+  background-color: var(--white);
 }
 .education a:focus {
-  color: #000000;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -159,39 +167,39 @@ tr:nth-child(even) {
 }
 .section#about { 
   -moz-box-shadow:
-  inset 0px 8px 30px -10px #616161;
+  inset 0px 8px 30px -10px var(--shadow);
   -webkit-box-shadow:
-  inset 0px 8px 30px -10px #616161;
+  inset 0px 8px 30px -10px var(--shadow);
   box-shadow:
-  inset 0px 8px 30px -10px #616161;
+  inset 0px 8px 30px -10px var(--shadow);
 }
 .section#education {
   -moz-box-shadow:
-  inset 0px 7px 20px -9px #616161, 
-  inset 0px -11px 20px -13px #616161;
+  inset 0px 7px 20px -9px var(--shadow), 
+  inset 0px -11px 20px -13px var(--shadow);
   -webkit-box-shadow:
-  inset 0px 7px 20px -9px #616161, 
-  inset 0px -11px 20px -13px #616161;
+  inset 0px 7px 20px -9px var(--shadow), 
+  inset 0px -11px 20px -13px var(--shadow);
   box-shadow:
-  inset 0px 7px 20px -9px #616161, 
-  inset 0px -11px 20px -13px #616161;
+  inset 0px 7px 20px -9px var(--shadow), 
+  inset 0px -11px 20px -13px var(--shadow);
 }
 .section#portfolio{ 
   -moz-box-shadow:
-  inset 0px 11px 10px -9px #616161;
+  inset 0px 11px 10px -9px var(--shadow);
   -webkit-box-shadow:
-  inset 0px 11px 10px -9px #616161;
+  inset 0px 11px 10px -9px var(--shadow);
   box-shadow:
-  inset 0px 11px 10px -9px #616161;
+  inset 0px 11px 10px -9px var(--shadow);
 }
 
 div.portfolio-item {
   -moz-box-shadow:
-  1px 0px 30px -10px #616161;
+  1px 0px 30px -10px var(--shadow);
   -webkit-box-shadow:
-  1px 0px 30px -10px #616161;
+  1px 0px 30px -10px var(--shadow);
   box-shadow:
-  1px 0px 30px -10px #616161;
+  1px 0px 30px -10px var(--shadow);
 }
 
 #uc-logo {
@@ -235,12 +243,12 @@ div.img {
   vertical-align: text-bottom;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #FFFFFF;
+  border: 1px solid var(--white);
   width: 25%;
 }
 
 div.img:hover {
-  background-color: #D1C4E9;
+  background-color: var(--light);
   /* browser engine support */
   -o-transition:.3s;
   -ms-transition:.3s;
@@ -250,7 +258,7 @@ div.img:hover {
 }
 
 div.img:hover a {
-  color: #FFFFFF;
+  color: var(--white);
   -o-transition:.3s;
   -ms-transition:.3s;
   -moz-transition:.3s;
@@ -275,7 +283,7 @@ div.desc {
 }
 
 #social-list a {
-  color: #000000;
+  color: var(--black);
 }
 #social-list li {
   padding: 13px 20px;
@@ -345,7 +353,7 @@ div.desc {
 .hvr-outline-out:before {
   content: '';
   position: absolute;
-  border: #B388FF solid 2px;
+  border: var(--primary) solid 2px;
   border-radius: 75px;
   top: -10px;
   right: -10px;
@@ -380,7 +388,7 @@ div.desc {
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #000000;
+  background: var(--black);
   height: 4px;
   -webkit-transition-property: 25px, 25px;
   transition-property: left, right;
@@ -397,8 +405,8 @@ div.desc {
 /* https://codepen.io/rdallaire/pen/apoyx */
 /* Return to top button */
 #return-to-top {
-  background: rgb(0, 0, 0);
-  background: rgba(179, 136, 255, 0.7);
+  background: var(--white);
+  background: var(--light);
   -webkit-border-radius: 35px;
   -moz-border-radius: 35px;
   border-radius: 35px;
@@ -414,7 +422,7 @@ div.desc {
   z-index: 10;
 }
 #return-to-top i {
-  color: #FFFFFF;
+  color: var(--white);
   margin: 0;
   position: relative;
   left: 0;
@@ -429,36 +437,35 @@ div.desc {
   transition: all 0.3s ease;
 }
 #return-to-top:hover {
-  background: rgba(255, 255, 255, 1);
-  border-color: rgb(179, 136, 255);
+  background: var(--white);
+  border-color: var(--light);
   border-style: solid;
 }
 #return-to-top:hover i {
-  color: rgba(179, 136, 255, 0.7);
+  color: var(--light);
   top: 5px;
 }
 
 #experience {
-  background-color: #B388FF; /* material deep purple*/
-  opacity: 0.9;
+  background-color: var(--primary);
 }
 #experience.section h1 {
-  color: #FFFFFF;
+  color: var(--white);
 }
 #experience .container-fluid {
   padding: 2%;
 }
 
 #projects{
-  background-color: #80D8FF; /* material light blue*/
+  background-color: var(--black);
 }
 #projects.section h1 {
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 .card {
   min-width: 250px;
-  border-color: #000000;
+  border-color: var(--black);
   border-style: solid;
   border-width: 1px;
   margin: 5px;
@@ -493,7 +500,7 @@ h3.card-title {
   padding-top: 10px;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  background: #80D8FF;
+  background: var(--light);
   border-radius: 10px;
   position: absolute;
   width: 100%;
@@ -508,7 +515,7 @@ h3.card-title {
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   align-items: center;
-  color: #FFFFFF;
+  color: var(--white);
   display: flex;
   justify-content: center;
   height: 100%;
@@ -602,9 +609,9 @@ h3.card-title {
 }
 .portfolio-modal .close-modal .lr {
   height: 75px;
-  width: 1px;
+  width: 2px;
   margin-left: 35px;
-  background-color: #222222;
+  background-color: var(--dark);
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   /* IE 9 */
@@ -614,8 +621,8 @@ h3.card-title {
 }
 .portfolio-modal .close-modal .lr .rl {
   height: 75px;
-  width: 1px;
-  background-color: #222222;
+  width: 2px;
+  background-color: var(--dark);
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   /* IE 9 */
