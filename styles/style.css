@@ -16,7 +16,13 @@ a {
   color: var(--black);
   text-decoration: none;
 }
-a:focus, a:hover{
+
+a:focus {
+  color: var(--black);
+  text-decoration: none;
+}
+
+a:hover {
   color: var(--black);
   text-decoration: none;
 }
@@ -428,7 +434,7 @@ div.desc {
   margin: 0;
   position: relative;
   left: 0;
-  top: 14px;
+  top: 9px;
   font-size: 19px;
   -webkit-transform:translate3d(0,0,0);
   -webkit-transform-style: preserve-3d;
