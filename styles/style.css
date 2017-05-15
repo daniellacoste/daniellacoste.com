@@ -451,7 +451,7 @@ div.desc {
 }
 #return-to-top:hover i {
   color: var(--light);
-  top: 5px;
+  top: 0;
 }
 
 #experience {
