@@ -659,12 +659,18 @@ div.modal-dialog .modal-content .container .row {
 
 /* toggle HTML based on screen size */ 
 @media all and (min-width: 505px) {
-    .card-text .desktop {display: block;}
-    .card-text .mobile {display: none;}
+  .card-text .desktop {display: block;}
+  .card-text .mobile {display: none;}
+  div.modal-dialog .modal-content .container .row {
+    max-width: 50%;
+  }
 }
 @media all and (max-width: 504px) {
-    .card-text .desktop {display: none;}
-    .card-text .mobile {display: block;}
+  .card-text .desktop {display: none;}
+  .card-text .mobile {display: block;}
+  div.modal-dialog .modal-content .container .row {
+    max-width: 100%;
+  }
 }
 
 #overwatch-logo {
