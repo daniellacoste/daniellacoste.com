@@ -1,0 +1,15 @@
+{
+  "short_name": "LaCoste Logic",
+  "name": "LaCoste Logic",
+  "icons": [
+    {
+      "src":"img/xxxhdpi.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?homescreen=1",
+  "background_color": "#fff",
+  "theme_color": "",
+  "display": "browser"
+}
