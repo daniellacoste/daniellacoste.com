@@ -81,7 +81,8 @@ h2 {
 }
 
 .nav { 
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   text-align: center;
   background-color: var(--dark); 
@@ -247,12 +248,11 @@ div.portfolio-item {
 }
 
 div.img {
-  display: inline-block;
-  vertical-align: text-bottom;
-  margin-left: auto;
-  margin-right: auto;
   border: 1px solid var(--white);
-  width: 25%;
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 25%;
 }
 
 div.img:hover {
@@ -283,10 +283,6 @@ div.img img {
 div.desc {
   font-size: 30px;
   padding: 10%;
-  text-align: center;
-}
-
-#images {
   text-align: center;
 }
 
@@ -601,13 +597,14 @@ h3.card-title {
   margin-bottom: 30px;
 }
 .portfolio-modal .close-modal {
-  position: absolute;
-  width: 75px;
-  height: 75px;
   background-color: transparent;
+  cursor: pointer;
   top: 25px;
   right: 25px;
-  cursor: pointer;
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  z-index: 5;
 }
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
@@ -643,7 +640,8 @@ h3.card-title {
 div.row {
   margin-left: auto;
   margin-right: auto;
-  max-width: 75%;
+  max-width: 100%;
+  display: flow-root;
 }
 
 div.modal-dialog .modal-content .container .row {
@@ -667,15 +665,31 @@ div.modal-dialog .modal-content .container .row {
 @media all and (min-width: 505px) {
   .card-text .desktop {display: block;}
   .card-text .mobile {display: none;}
-  div.modal-dialog .modal-content .container .row {
-    max-width: 50%;
-  }
 }
 @media all and (max-width: 504px) {
   .card-text .desktop {display: none;}
   .card-text .mobile {display: block;}
+}
+/* Medium viewports */
+@media all and (min-width: 1024px) {
+  div.modal-dialog .modal-content .container .row {
+    max-width: 75%;
+  }
+}
+@media all and (max-width: 1023px) {
   div.modal-dialog .modal-content .container .row {
     max-width: 100%;
+  }
+}
+/* Largest viewports */
+@media all and (min-width: 1680px) {
+  div.modal-dialog .modal-content .container .row {
+    max-width: 50%;
+  }
+}
+@media all and (max-width: 1679px) {
+  div.modal-dialog .modal-content .container .row {
+    max-width: 75%%;
   }
 }
 
@@ -687,26 +701,8 @@ div.modal-dialog .modal-content .container .row {
   max-width: 50%;
 }
 
-.forest {
+.forest, .lake, .road, .building {
   float: left;
-  height: 100vh;
-  object-fit: cover;
-  width: 25%;
-}
-.lake {
-  float: left;
-  height: 100vh;
-  object-fit: cover;
-  width: 25%;
-}
-.road{
-  float: left;
-  height: 100vh;
-  object-fit: cover;
-  width: 25%;
-}
-.building {
-  float: right;
   height: 100vh;
   object-fit: cover;
   width: 25%;
@@ -737,4 +733,21 @@ div.modal-dialog .modal-content .container .row {
 #photography a.hvr-underline-from-center {
   padding: 5px;
   width: 100%;
+}
+
+.portfolio-modal .modal-content .sketch-container, .hi-fi-container {
+  text-align: center;
+}
+.portfolio-modal .modal-content .hi-fi-container img {
+  margin-bottom: 1px;
+}
+
+.sketch, .hi-fi {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+}
+
+.col-min {
+  min-width: 320px;
 }
