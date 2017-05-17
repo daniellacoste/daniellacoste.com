@@ -227,23 +227,7 @@ div.portfolio-item {
   text-transform: lowercase;
 }
 
-.instagram:active {
-  transform: translateY(5px);
-}
-
-.twitter:active {
-  transform: translateY(5px);
-}
-
-.linkedin:active {
-  transform: translateY(5px);
-}
-
-.github:active {
-  transform: translateY(5px);
-}
-
-.email:active {
+.instagram:active, .twitter:active, .linkedin:active, .github:active, .email:active, .medium:active {
   transform: translateY(5px);
 }
 
