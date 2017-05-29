@@ -1,4 +1,4 @@
-# daniellacoste.github.io
+# https://daniellacoste.com
 My [personal website](https://daniellacoste.com)! 
 
 A home for my portfolio, blog posts, photography, and other musings. 
