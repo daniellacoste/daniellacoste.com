@@ -16,7 +16,13 @@ a {
   color: var(--black);
   text-decoration: none;
 }
-a:focus, a:hover{
+
+a:focus {
+  color: var(--black);
+  text-decoration: none;
+}
+
+a:hover {
   color: var(--black);
   text-decoration: none;
 }
@@ -75,7 +81,8 @@ h2 {
 }
 
 .nav { 
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   text-align: center;
   background-color: var(--dark); 
@@ -220,33 +227,16 @@ div.portfolio-item {
   text-transform: lowercase;
 }
 
-.instagram:active {
-  transform: translateY(5px);
-}
-
-.twitter:active {
-  transform: translateY(5px);
-}
-
-.linkedin:active {
-  transform: translateY(5px);
-}
-
-.github:active {
-  transform: translateY(5px);
-}
-
-.email:active {
+.instagram:active, .twitter:active, .linkedin:active, .github:active, .email:active, .medium:active {
   transform: translateY(5px);
 }
 
 div.img {
-  display: inline-block;
-  vertical-align: text-bottom;
-  margin-left: auto;
-  margin-right: auto;
   border: 1px solid var(--white);
-  width: 25%;
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 25%;
 }
 
 div.img:hover {
@@ -280,15 +270,11 @@ div.desc {
   text-align: center;
 }
 
-#images {
-  text-align: center;
-}
-
 #social-list a {
   color: var(--black);
 }
 #social-list li {
-  padding: 13px 20px;
+  padding: 15px 30px;
   display: inline-block;
 }
 
@@ -428,7 +414,7 @@ div.desc {
   margin: 0;
   position: relative;
   left: 0;
-  top: 14px;
+  top: 9px;
   font-size: 19px;
   -webkit-transform:translate3d(0,0,0);
   -webkit-transform-style: preserve-3d;
@@ -445,7 +431,7 @@ div.desc {
 }
 #return-to-top:hover i {
   color: var(--light);
-  top: 5px;
+  top: 0;
 }
 
 #experience {
@@ -595,13 +581,14 @@ h3.card-title {
   margin-bottom: 30px;
 }
 .portfolio-modal .close-modal {
-  position: absolute;
-  width: 75px;
-  height: 75px;
   background-color: transparent;
+  cursor: pointer;
   top: 25px;
   right: 25px;
-  cursor: pointer;
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  z-index: 5;
 }
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
@@ -637,7 +624,8 @@ h3.card-title {
 div.row {
   margin-left: auto;
   margin-right: auto;
-  max-width: 75%;
+  max-width: 100%;
+  display: flow-root;
 }
 
 div.modal-dialog .modal-content .container .row {
@@ -661,15 +649,31 @@ div.modal-dialog .modal-content .container .row {
 @media all and (min-width: 505px) {
   .card-text .desktop {display: block;}
   .card-text .mobile {display: none;}
-  div.modal-dialog .modal-content .container .row {
-    max-width: 50%;
-  }
 }
 @media all and (max-width: 504px) {
   .card-text .desktop {display: none;}
   .card-text .mobile {display: block;}
+}
+/* Medium viewports */
+@media all and (min-width: 1024px) {
+  div.modal-dialog .modal-content .container .row {
+    max-width: 75%;
+  }
+}
+@media all and (max-width: 1023px) {
   div.modal-dialog .modal-content .container .row {
     max-width: 100%;
+  }
+}
+/* Largest viewports */
+@media all and (min-width: 1680px) {
+  div.modal-dialog .modal-content .container .row {
+    max-width: 50%;
+  }
+}
+@media all and (max-width: 1679px) {
+  div.modal-dialog .modal-content .container .row {
+    max-width: 75%%;
   }
 }
 
@@ -681,26 +685,8 @@ div.modal-dialog .modal-content .container .row {
   max-width: 50%;
 }
 
-.forest {
+.forest, .lake, .road, .building {
   float: left;
-  height: 100vh;
-  object-fit: cover;
-  width: 25%;
-}
-.lake {
-  float: left;
-  height: 100vh;
-  object-fit: cover;
-  width: 25%;
-}
-.road{
-  float: left;
-  height: 100vh;
-  object-fit: cover;
-  width: 25%;
-}
-.building {
-  float: right;
   height: 100vh;
   object-fit: cover;
   width: 25%;
@@ -731,4 +717,21 @@ div.modal-dialog .modal-content .container .row {
 #photography a.hvr-underline-from-center {
   padding: 5px;
   width: 100%;
+}
+
+.portfolio-modal .modal-content .sketch-container, .hi-fi-container {
+  text-align: center;
+}
+.portfolio-modal .modal-content .hi-fi-container img {
+  margin-bottom: 1px;
+}
+
+.sketch, .hi-fi {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+}
+
+.col-min {
+  min-width: 320px;
 }
